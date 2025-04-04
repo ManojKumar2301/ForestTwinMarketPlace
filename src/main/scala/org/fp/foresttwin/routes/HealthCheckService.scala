@@ -14,6 +14,6 @@ object HealthCheckService {
 
   
   val healthRoutes: HttpRoutes[IO] = Http4sServerInterpreter[IO]().toRoutes(
-    healthEndpoint.serverLogicSuccess(_ => IO.pure("OK- Success:200"))
+    healthEndpoint.serverLogicSuccess(_ => IO.pure("Status : OK - Success Code : 200"))
   )
 }
